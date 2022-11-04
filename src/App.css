@@ -1,38 +1,296 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 100%;
+  background-color: white;
+  padding: 2rem 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.border-container {
+  width: 60%;
+  height: 600px;
+  padding: 0 69px;
+  border-radius: 50%;
+  /* border: 2px dashed red; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-info {
+  width: 330px;
+  font-size: 20px;
+}
+
+.text-info-first,
+.text-info-second,
+.text-info-third,
+.text-info-fourth {
+  display: flex;
+  height: 52px;
+  align-items: center;
+  position: relative;
+}
+
+.text-info-colored {
+  border: 1px solid #615c5c;
+  border-radius: 5px;
+  padding: 1px;
+  margin-right: 4px;
+}
+
+.text-info-colored h2 {
+  color: white;
+  background-color: #DB7523;
+  border-radius: 5px;
+  padding: 0 4px 0 4px;
+  margin: 0;
+} 
+
+.text-info button {
+  border: 2px solid #DB7523;
+  border-radius: 50px ;
+  padding: 4px 6px 4px 6px;
+  background-color: #F5F5F5;
+  margin-left: 4px;
+  font-size: 12px;
+  height: 40px;
+  width: 100px;
+}
+
+.image-container {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.image-container-wrapper {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border: 10px solid #DB7523;
+  border-radius: 50%;
+  background-image: url('/public/images/emptyImg.jpg');
+  background-size: contain;
+}
+
+.position-marker {
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  border: 2px solid #DB7523;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.position-marker p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #DB7523;
+}
+
+.first{
+  top: 50px;
+  left: -160px;
+}
+
+.second {
+  top: 50px;
+  right: -30px;
+}
+
+.third {
+  right: 0;
+  bottom: -30px;
+}
+
+.fourth {
+  left: 0;
+  bottom: -30px;
+}
+
+.image-container-description {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #000000;
+  opacity: 57%;
+  height: 23px;
+}
+
+.descrption-first {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+.descrption-second {
+  position: absolute;
+  bottom: 35px;
+  right: -35px;
+}
+.descrption-third {
+  position: absolute;
+  bottom: 10px;
+  right: -70px;
+}
+.descrption-fourth {
+  position: absolute;
+  bottom: 10px;
+  right: -30px;
+}
+
+.image-container-description p {
+  background-color: #DB7523;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+}
+
+.image-container-description h1 {
+  color: #DB7523;
+  min-width: max-content;
+  font-size: 10px;
+  margin-left: 4px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.svg-path-1{
+  position: absolute;
+  top: -200px;
+  left: 110%;
+}
+.svg-path-2{
+  position: absolute;
+  bottom: -250px;
+  right: -200px;
+}
+.svg-path-3{
+  position: absolute;
+  top: 90px;
+  right: 100%;
+}
+.svg-path-4{
+  position: absolute;
+  top: -190px;
+  left: -17px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lap-svg-path{
+  position: absolute;
+  top: 0;
+  right:-100px;
+}
+
+.tooltip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 23px;
+  padding: 0 8px 0 8px;
+  border-radius: 5px;
+}
+
+.tooltip .tooltiptext1 {
+  visibility: hidden;
+  width: 220px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 1rem;
+  position: absolute;
+  z-index: 1;
+  top: 'calc(height/2)%';
+  left: 110%;
+  font-size: small;
+}
+
+.tooltip .tooltiptext1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext1 {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext2 {
+  visibility: hidden;
+  width: 220px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 1rem;
+  position: absolute;
+  z-index: 1;
+  top: 'calc(height/2)%';
+  right: 110%;
+  font-size: small;
+}
+
+.tooltip .tooltiptext2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+.tooltip:hover .tooltiptext2 {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext3 {
+  visibility: hidden;
+  width: 220px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 1rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  font-size: small;
+  margin-left: -110px;
+}
+
+.tooltip .tooltiptext3::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext3 {
+  visibility: visible;
+}
+
+.curvedText {
+  font-weight: bold;
+  font-size: x-large;
 }
